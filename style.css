@@ -1,0 +1,282 @@
+:root {
+    --primary: #6272a4;
+    --secondary: #263238;
+    --accent: #82A19E;
+    --light: #f8f9fa;
+    --dark: #101418;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding-left: 200px;
+    padding-right: 200px; 
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration-line: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dark);
+    list-style: none;
+    width: 300px;
+    border: 1px solid var(--primary);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.dropdown-menu li a {
+    padding: 12px 20px;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: var(--light);
+    transition: 0.3s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    margin-left: 250px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--dark);
+    padding: 20px;
+}
+
+.contact-form {
+    background-color: var(--dark);
+    border: 1px solid #6272A455;
+    
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h2 {
+    color: var(--accent);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-group input, 
+.input-group textarea {
+    background-color: #1a1f24;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    padding: 12px;
+    color: #ECEFF1;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 600px;
+}
+
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--dark);
+}
+
+
+.input-group select {
+    background-color: #1a1f24;
+    border: 1px solid #6272A4;
+    border-radius: 4px;
+    padding: 12px;
+    color: #ECEFF1;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236272A4' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+}
+
+/* Hover/Focus for Select */
+.input-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2382A19E' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+/* Styling the options dropdown (Limited by browsers, but this helps) */
+.input-group select option {
+    background-color: #1a1f24;
+    color: #ECEFF1;
+}
+
+/* Responsive fix for the select wrapper */
+.select-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent);
+    color: var(--dark); /* Dark text on gold button */
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Hamburger Menu Logic */
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--dark);
+        transition: 0.4s ease-in-out;
+        z-index: 15;
+    }
+
+    /* Shows menu when checkbox is checked */
+    #menu-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+
+    /* Hamburger to 'X' animation */
+    #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

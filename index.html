@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Sai Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html" class="logo">S.S.ASSOCIATES</a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="about.html" class="drop-trigger">Loans ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Personal Loan</a></li>
+                    <li><a href="#">Business Loan</a></li>
+                    <li><a href="#">Car Loan</a></li>
+                    <li><a href="#">Home Loan</a></li>
+                    <li><a href="#">Loan Against Property</a></li>
+                    <li><a href="#">Gold Loan</a></li>
+                    <li><a href="#">Machinery Loan</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Calculate Loan Amount</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <form action="#" class="loan-form">
+            <h2>Apply for Loan</h2>
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="John Smith" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="example@example.com" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="+91 234 567 890">
+            </div>
+            <div class="input-group">
+                <label for="type">Type of Loan</label>
+                <div class="select-wrapper">
+                    <select id="type" name="type">
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="consultation">Personal Loan</option>
+                        <option value="consultation">Business Loan</option>
+                        <option value="consultation">Car Loan</option>
+                        <option value="consultation">Home Loan</option>
+                        <option value="consultation">Loan Against Property</option>
+                        <option value="consultation">Gold Loan</option>
+                        <option value="consultation">Machinery Loan</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Apply Now</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
