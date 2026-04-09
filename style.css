@@ -30,8 +30,9 @@ nav {
     position: absolute;
     width: 100%;
     z-index: 10;
-    padding-left: 200px;
-    padding-right: 200px; 
+    padding-left: 50px;
+    padding-right: 50px; 
+    background-color: var(--secondary);
 }
 
 .logo {
@@ -115,23 +116,36 @@ nav {
     display: none;
 }
 
+
+.banner-container {
+    width: 100%;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
 .form-container {
+    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.3);
     display: flex;
-    margin-left: 250px;
+    margin-left: 150px;
     align-items: center;
-    min-height: 100vh;
-    background-color: var(--dark);
+    height: 45vh;
+    background-color: var(--secondary);
     padding: 20px;
+    position: absolute;
+    top: 24%;
 }
 
 .contact-form {
     background-color: var(--dark);
-    border: 1px solid #6272A455;
-    
+    border: 1px solid #6272A455;   
     padding: 40px;
     border-radius: 8px;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -144,14 +158,14 @@ nav {
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     display: flex;
     flex-direction: column;
 }
 
 .input-group label {
     color: var(--primary);
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -161,11 +175,11 @@ nav {
     background-color: #1a1f24;
     border: 1px solid var(--primary);
     border-radius: 4px;
-    padding: 12px;
+    padding: 8px;
     color: #ECEFF1;
     font-size: 1rem;
     transition: all 0.3s ease;
-    width: 600px;
+    width: 400px;
 }
 
 
@@ -181,7 +195,7 @@ nav {
     background-color: #1a1f24;
     border: 1px solid #6272A4;
     border-radius: 4px;
-    padding: 12px;
+    padding: 8px;
     color: #ECEFF1;
     font-size: 1rem;
     cursor: pointer;
@@ -194,27 +208,27 @@ nav {
     background-position: calc(100% - 15px) center;
 }
 
-/* Hover/Focus for Select */
+
 .input-group select:focus {
     outline: none;
     border-color: var(--accent);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2382A19E' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
 }
 
-/* Styling the options dropdown (Limited by browsers, but this helps) */
+
 .input-group select option {
     background-color: #1a1f24;
     color: #ECEFF1;
 }
 
-/* Responsive fix for the select wrapper */
+
 .select-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-/* Submit Button */
+
 .submit-btn {
     width: 100%;
     padding: 14px;
@@ -228,23 +242,30 @@ nav {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
     background-color: var(--accent);
-    color: var(--dark); /* Dark text on gold button */
+    color: var(--dark);
 }
 
+.why-us-container {
+    width: 100%;
+    background-color: var(--secondary);
+    height: 200px;
+    text-align: center;
+}
 
-
-
+.why-text {
+    padding-top: 20px;
+}
 
 
 
 
 
 @media (max-width: 768px) {
-    /* Hamburger Menu Logic */
     .menu-btn {
         display: flex;
     }

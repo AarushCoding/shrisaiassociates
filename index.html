@@ -36,39 +36,48 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="form-container">
-        <form action="#" class="loan-form">
-            <h2>Apply for Loan</h2>
-            <div class="input-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="John Smith" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="example@example.com" required>
-            </div>
-            <div class="input-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="+91 234 567 890">
-            </div>
-            <div class="input-group">
-                <label for="type">Type of Loan</label>
-                <div class="select-wrapper">
-                    <select id="type" name="type">
-                        <option value="" disabled selected>Choose an option</option>
-                        <option value="consultation">Personal Loan</option>
-                        <option value="consultation">Business Loan</option>
-                        <option value="consultation">Car Loan</option>
-                        <option value="consultation">Home Loan</option>
-                        <option value="consultation">Loan Against Property</option>
-                        <option value="consultation">Gold Loan</option>
-                        <option value="consultation">Machinery Loan</option>
-                    </select>
+    <div class="banner-container">
+        <img class="banner" src="./banner.jpg" alt="banner">
+        <div class="form-container">
+            <form action="#" class="loan-form">
+                <h2>Apply for Loan</h2>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Smith" required>
                 </div>
-            </div>
-            <button type="submit" class="submit-btn">Apply Now</button>
-        </form>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="example@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 234 567 890">
+                </div>
+                <div class="input-group">
+                    <label for="type">Type of Loan</label>
+                    <div class="select-wrapper">
+                        <select id="type" name="type">
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="personal">Personal Loan</option>
+                            <option value="business">Business Loan</option>
+                            <option value="car">Car Loan</option>
+                            <option value="home">Home Loan</option>
+                            <option value="property">Loan Against Property</option>
+                            <option value="gold">Gold Loan</option>
+                            <option value="machinery">Machinery Loan</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Apply Now</button>
+            </form>
+        </div>
     </div>
+
+    <div class="why-us-container">
+        <h3 class="why-text">Why S.S.ASSOCIATES</h3>
+
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
