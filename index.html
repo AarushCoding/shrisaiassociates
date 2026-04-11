@@ -25,8 +25,8 @@
             <li class="dropdown">
                 <a href="#" class="drop-trigger">Loan Products <small>▼</small></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Personal Loan</a></li>
-                    <li><a href="#">Business Loan</a></li>
+                    <li><a href="./personal.html">Personal Loan</a></li>
+                    <li><a href="./business.html">Business Loan</a></li>
                     <li><a href="#">Home Loan</a></li>
                     <li><a href="#">Car Loan</a></li>
                     <li><a href="#">Gold Loan</a></li>
@@ -34,12 +34,13 @@
                     <li><a href="#">Machinery Loan</a></li>
                 </ul>
             </li>
-            <li><a href="#">EMI Calculator</a></li>
+            <li><a href="index.html#calc">EMI Calculator</a></li>
             <li><a href="#" class="nav-cta">Contact Us</a></li>
         </ul>
     </nav>
 
     <section class="hero">
+        
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Fast & Flexible <br><span class="highlight">Loan Solutions</span></h1>
@@ -58,11 +59,14 @@
                     </div>
                     <div class="input-group">
                         <label>Email Address</label>
-                        <input type="text" placeholder="Enter name" required>
+                        <input type="text" placeholder="Enter email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address">
                     </div>
                     <div class="input-group">
                         <label>Phone Number</label>
-                        <input type="tel" placeholder="+91 00000 00000" required>
+                        <div class="phone-input-wrapper">
+                            <span class="prefix">+91</span>
+                            <input type="tel" placeholder="00000 00000" required pattern="[0-9]{10}" maxlength="10" title="Please enter a valid phone number.">
+                        </div>
                     </div>
                     <div class="input-group">
                         <label>Loan Type</label>
@@ -90,23 +94,23 @@
         <div class="why-grid">
             <div class="why-card">
                 <div class="why-number">01</div>
-                <h3>Expert Guidance</h3>
-                <p>Our financial experts help you choose the best loan products tailored to your income and goals.</p>
+                <h3>-</h3>
+                <p>---</p>
             </div>
             <div class="why-card">
                 <div class="why-number">02</div>
-                <h3>Low Interest Rates</h3>
-                <p>We partner with multiple banks to ensure you get the most competitive interest rates in the market.</p>
+                <h3>-</h3>
+                <p>---</p>
             </div>
             <div class="why-card">
                 <div class="why-number">03</div>
-                <h3>Fast Disbursement</h3>
-                <p>Get your funds approved and disbursed within 24-48 hours with our streamlined digital process.</p>
+                <h3>-</h3>
+                <p>---</p>
             </div>
             <div class="why-card">
                 <div class="why-number">04</div>
-                <h3>Zero Hidden Fees</h3>
-                <p>Experience complete transparency. No hidden charges or surprise costs at any stage of the process.</p>
+                <h3>-</h3>
+                <p>---</p>
             </div>
         </div>
     </section>
@@ -143,5 +147,57 @@
             </div>
         </div>
     </section>
+    <section class="calculator-section" id="calc">
+        <div class="section-header">
+            <h2>Loan EMI Calculator</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="calc-container">
+            <div class="calc-inputs">
+                <div class="input-box">
+                    <div class="label-row">
+                        <label>Loan Amount</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="amount-input" value="100000">
+                            <span>₹</span>
+                        </div>
+                    </div>
+                    <input type="range" id="amount-slider" min="10000" max="5000000" step="10000" value="100000" class="slider">
+                </div>
+
+                <div class="input-box">
+                    <div class="label-row">
+                        <label>Interest Rate (P.A.)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="rate-input" value="8.5" step="0.1">
+                            <span>%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="rate-slider" min="1" max="20" step="0.1" value="8.5" class="slider">
+                </div>
+
+                <div class="input-box">
+                    <div class="label-row">
+                        <label>Tenure (Years)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="tenure-input" value="5">
+                            <span>Yr</span>
+                        </div>
+                    </div>
+                    <input type="range" id="tenure-slider" min="1" max="30" step="1" value="5" class="slider">
+                </div>
+            </div>
+
+            <div class="calc-result">
+                <h3>Monthly EMI</h3>
+                <div class="emi-value">₹ <span id="emi-display">2,052</span></div>
+                <p>Estimated EMI @ <span id="rate-display">8.5</span>% P.A.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

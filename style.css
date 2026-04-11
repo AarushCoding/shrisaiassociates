@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--dark);
@@ -201,6 +205,47 @@ nav {
     border-radius: 5px;
 }
 
+/* Phone Input Specific Wrapper */
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: #1a1f24; /* Matches your other inputs */
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the background doesn't bleed past corners */
+    transition: border-color 0.3s;
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: var(--accent);
+}
+
+.phone-input-wrapper .prefix {
+    background: rgba(130, 161, 158, 0.1); /* Subtle tint of your accent color */
+    color: var(--accent);
+    padding: 12px 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-right: 1px solid #333;
+    user-select: none; /* Prevents users from highlighting the prefix */
+}
+
+.phone-input-wrapper input {
+    flex: 1;
+    background: transparent !important; /* Removes the double background */
+    border: none !important; /* Removes the inner border */
+    padding: 12px;
+    color: white;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Chrome/Safari autofill fix to keep background dark */
+.phone-input-wrapper input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #1a1f24 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
 .submit-btn {
     width: 100%;
     padding: 15px;
@@ -316,6 +361,101 @@ nav {
     font-weight: 600;
 }
 
+.calculator-section {
+    padding: 80px 8%;
+    background: #0d1116;
+}
+
+.calc-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    background: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(130, 161, 158, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.input-box { margin-bottom: 30px; }
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    background: #101418;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 80px;
+    font-weight: 600;
+    text-align: right;
+    outline: none;
+}
+
+.input-wrapper span { color: var(--accent); margin-left: 5px; font-size: 0.8rem; }
+
+/* Custom Slider Styling */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #333;
+    border-radius: 5px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+/* Result Box */
+.calc-result {
+    background: #101418;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed var(--accent);
+}
+
+.emi-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 15px 0;
+}
+
+.calc-result h3 { font-weight: 400; color: #ccc; }
+.calc-result p { color: #888; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .calc-container { grid-template-columns: 1fr; }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero-content {
@@ -324,4 +464,138 @@ nav {
     }
     .hero-text h1 { font-size: 2.5rem; }
     .hero-badges { justify-content: center; }
+}
+
+
+
+
+
+
+/*-----PERSONAL LOANS-----*/
+/* Personal Loan Page Specifics */
+.loan-page-hero {
+    padding: 120px 8%;
+    background: linear-gradient(to right, var(--dark), rgba(16, 20, 24, 0.7)), url('banner.png');
+    background-size: cover;
+    text-align: center;
+}
+
+.loan-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.big-apply-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.big-apply-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(130, 161, 158, 0.3);
+}
+
+/* Reasons Section */
+.loan-reasons { padding: 80px 8%; background: #0d1116; }
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.reason-item {
+    background: var(--nav-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.reason-item .icon { font-size: 2.5rem; display: block; margin-bottom: 15px; }
+
+/* Feature Cards */
+.loan-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 60px 8%;
+    background: var(--dark);
+}
+
+.feature-card {
+    background: #161b22;
+    padding: 30px;
+    border-top: 4px solid var(--accent);
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.feature-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 10px 0;
+}
+
+/* Documents Section */
+.docs-section {
+    padding: 80px 8%;
+    background: #0d1116;
+}
+
+.docs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #161b22;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.docs-text { padding: 60px; }
+
+.doc-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.doc-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.doc-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.doc-icon-box {
+    font-size: 8rem;
+    text-align: center;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .docs-container { grid-template-columns: 1fr; }
+    .doc-icon-box { display: none; }
 }
