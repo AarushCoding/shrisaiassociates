@@ -3,81 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Sai Associates</title>
+    <title>Shri Sai Associates | Trusted Financial Partner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <div class="logo"><a href="index.html" class="logo">S.S.ASSOCIATES</a></div>
+        <div class="logo-container">
+            <a href="index.html" class="logo">S.S.<span>ASSOCIATES</span></a>
+        </div>
+        
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </label>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="about.html" class="drop-trigger">Loans ▼</a>
+                <a href="#" class="drop-trigger">Loan Products <small>▼</small></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Personal Loan</a></li>
                     <li><a href="#">Business Loan</a></li>
-                    <li><a href="#">Car Loan</a></li>
                     <li><a href="#">Home Loan</a></li>
-                    <li><a href="#">Loan Against Property</a></li>
+                    <li><a href="#">Car Loan</a></li>
                     <li><a href="#">Gold Loan</a></li>
+                    <li><a href="#">Loan Against Property</a></li>
                     <li><a href="#">Machinery Loan</a></li>
                 </ul>
             </li>
-            <li><a href="contact.html">Calculate Loan Amount</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">EMI Calculator</a></li>
+            <li><a href="#" class="nav-cta">Contact Us</a></li>
         </ul>
     </nav>
-    <div class="banner-container">
-        <img class="banner" src="./banner.jpg" alt="banner">
-        <div class="form-container">
-            <form action="#" class="loan-form">
-                <h2>Apply for Loan</h2>
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="John Smith" required>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Fast & Flexible <br><span class="highlight">Loan Solutions</span></h1>
+                <p>Your trusted partner for Home, Business, and Personal financial needs. Get quick approvals with minimum documentation.</p>
+                <div class="hero-badges">
+                    <span>✔ Quick Approval</span>
+                    <span>✔ Minimal Paperwork</span>
                 </div>
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="example@example.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="+91 234 567 890">
-                </div>
-                <div class="input-group">
-                    <label for="type">Type of Loan</label>
-                    <div class="select-wrapper">
-                        <select id="type" name="type">
-                            <option value="" disabled selected>Choose an option</option>
+            </div>
+            <div class="form-container">
+                <form action="#" class="loan-form">
+                    <h2>Apply for Loan</h2>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="text" placeholder="Enter name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 00000 00000" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Loan Type</label>
+                        <select>
                             <option value="personal">Personal Loan</option>
                             <option value="business">Business Loan</option>
-                            <option value="car">Car Loan</option>
                             <option value="home">Home Loan</option>
-                            <option value="property">Loan Against Property</option>
-                            <option value="gold">Gold Loan</option>
-                            <option value="machinery">Machinery Loan</option>
+                            <option value="personal">Car Loan</option>
+                            <option value="business">Gold Loan</option>
+                            <option value="home">Loan Against Property</option>
+                            <option value="home">Machinery Loan</option>
                         </select>
                     </div>
-                </div>
-                <button type="submit" class="submit-btn">Apply Now</button>
-            </form>
+                    <button type="submit" class="submit-btn">Get Started</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="why-us-container">
-        <h3 class="why-text">Why S.S.ASSOCIATES</h3>
+    <section class="why-us">
+        <div class="section-header">
+            <h2>Why Choose S.S. Associates?</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-number">01</div>
+                <h3>Expert Guidance</h3>
+                <p>Our financial experts help you choose the best loan products tailored to your income and goals.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">02</div>
+                <h3>Low Interest Rates</h3>
+                <p>We partner with multiple banks to ensure you get the most competitive interest rates in the market.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">03</div>
+                <h3>Fast Disbursement</h3>
+                <p>Get your funds approved and disbursed within 24-48 hours with our streamlined digital process.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-number">04</div>
+                <h3>Zero Hidden Fees</h3>
+                <p>Experience complete transparency. No hidden charges or surprise costs at any stage of the process.</p>
+            </div>
+        </div>
+    </section>
 
-    </div>
-    
-    <script src="script.js"></script>
+    <section class="services">
+        <div class="section-header">
+            <h2>Our Loan Products</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon">🏠</div>
+                <h3>Home Loan</h3>
+                <p>Own your dream home with our low-interest mortgage solutions.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">💼</div>
+                <h3>Business Loan</h3>
+                <p>Fuel your business growth with flexible working capital.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">🚗</div>
+                <h3>Car Loan</h3>
+                <p>Drive home your favorite car with up to 90% funding.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">💰</div>
+                <h3>Personal Loan</h3>
+                <p>Instant funds for medical, travel, or wedding expenses.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
