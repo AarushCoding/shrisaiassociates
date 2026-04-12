@@ -23,14 +23,12 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
-/* Navigation Container */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 8%;
-    height: 80px; /* Consistent height */
+    height: 80px;
     background: #161b22;
     position: sticky;
     top: 0;
@@ -52,14 +50,14 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    list-style: none; /* Removes bullets */
+    list-style: none;
     margin: 0;
     padding: 0;
     gap: 30px;
 }
 
 .nav-links li {
-    position: relative; /* Crucial for dropdown positioning */
+    position: relative;
 }
 
 .nav-links a {
@@ -77,11 +75,11 @@ nav {
 /* Dropdown Specifics */
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* Sits exactly below the nav bar */
+    top: 100%;
     left: 0;
     background: #1a1f24;
     min-width: 200px;
-    list-style: none; /* Removes bullets from dropdown */
+    list-style: none;
     padding: 10px 0;
     margin: 0;
     border: 1px solid rgba(130, 161, 158, 0.2);
@@ -209,10 +207,10 @@ nav {
 .phone-input-wrapper {
     display: flex;
     align-items: center;
-    background: #1a1f24; /* Matches your other inputs */
+    background: #1a1f24;
     border: 1px solid #333;
     border-radius: 5px;
-    overflow: hidden; /* Ensures the background doesn't bleed past corners */
+    overflow: hidden;
     transition: border-color 0.3s;
 }
 
@@ -221,26 +219,25 @@ nav {
 }
 
 .phone-input-wrapper .prefix {
-    background: rgba(130, 161, 158, 0.1); /* Subtle tint of your accent color */
+    background: rgba(130, 161, 158, 0.1); 
     color: var(--accent);
     padding: 12px 15px;
     font-weight: 700;
     font-size: 0.9rem;
     border-right: 1px solid #333;
-    user-select: none; /* Prevents users from highlighting the prefix */
+    user-select: none;
 }
 
 .phone-input-wrapper input {
     flex: 1;
-    background: transparent !important; /* Removes the double background */
-    border: none !important; /* Removes the inner border */
+    background: transparent !important; 
+    border: none !important;
     padding: 12px;
     color: white;
     outline: none;
     font-family: inherit;
 }
 
-/* Chrome/Safari autofill fix to keep background dark */
 .phone-input-wrapper input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #1a1f24 inset !important;
     -webkit-text-fill-color: white !important;
@@ -461,11 +458,109 @@ nav {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        margin-top: 100px;
     }
+    .form-container { margin-bottom: 20px;}
     .hero-text h1 { font-size: 2.5rem; }
     .hero-badges { justify-content: center; }
 }
 
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+        background: var(--nav-bg); 
+        border-bottom: 1px solid rgba(130, 161, 158, 0.2);
+    }
+
+    /* Burger Menu Icon Styling */
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--light);
+        border-radius: 2px;
+        transition: 0.3s ease;
+    }
+
+    
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 8%;
+        border-bottom: 2px solid var(--accent);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        
+        
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    
+    #menu-toggle:checked ~ .nav-links {
+        max-height: 600px; 
+    }
+
+    
+    .dropdown-menu {
+        position: static; 
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        border-left: 2px solid var(--accent);
+        margin-top: 10px;
+        min-width: 100%;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .nav-cta {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    
+    #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
 
 
 
